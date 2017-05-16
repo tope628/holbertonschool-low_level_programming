@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
-* print_alphabet -print alphabet
+* print_to_98 - print from n to 98
 * Return: void
+* @n: integer given
 */
 void print_to_98(int n)
 {
@@ -11,12 +12,7 @@ void print_to_98(int n)
 			n++;
 		if (n == 98)
 			_putchar(n);
-		if (n > 98) 
+		if (n > 98)
 			_putchar(n);
 			n--;
-
-		
-		_putchar('\n');
-
-	return;
 }

@@ -1,15 +1,16 @@
 #include "holberton.h"
 
 /**
-* print_sign - checks the sign of a number
-* Return: 0 if successful
-* n - integer
+* add - adds two integers
+* Return: result if successful
+* @n: integer given
+* @o: integer given
 */
-int add (int, int)
+int add(int n, int o)
 {
 	int result;
 
-	result = int + int;
+	result = (n + o);
 
-	return result;
+	return (result);
 }

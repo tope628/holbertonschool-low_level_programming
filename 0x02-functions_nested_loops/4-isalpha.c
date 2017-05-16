@@ -3,6 +3,7 @@
 /**
 * _isalpha - checks for alphabetic character
 * Return: void
+* @c: number given
 */
 int _isalpha(int c)
 {

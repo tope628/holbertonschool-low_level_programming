@@ -1,32 +1,14 @@
 #include "holberton.h"
 
 /**
-* print_sign - checks the sign of a number
-* Return: 0 if successful
-* n - integer
+* _abs - finds absolute value 
+* Return: n if successful
+* n: integer given
 */
-int _abs(int)
+int _abs(int n)
 {
-	if (n > '0')
-		_putchar('+');
-		_putchar(',');
-		_putchar(' ');
-		_putchar('1');
-		_putchar('\n');
-	else if (n == '0')
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		_putchar('0');
-		_putchar('\n');
+	if (n < '0')
+		return (n * -1);
 	else
-		_putchar('-');
-		_putchar(',');
-		_putchar(' ');
-		_putchar('-');
-		_putchar('1');
-		_putchar('\n');
-	_putchar('\n');
-
-	return (0);
+		return (n);
 }
