@@ -1,17 +1,16 @@
 #include "holberton.h"
 
 /**
-* _islower - checks for lowercase letter
+* print_last_digit - checks for lowercase letter
+* @n: int given
 * Return: void
 */
 int print_last_digit(int n)
 {
-	int lastn;
+	int lastn = (n % 10);
 
-	lastn = n % 10;
-
-	_putchar(lastn);
-
-	_putchar('\n');
-	return(0);
+	if (n >= 0)
+		return (lastn);
+	else
+		return (lastn * -1);
 }
