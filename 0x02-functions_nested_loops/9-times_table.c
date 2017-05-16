@@ -6,13 +6,13 @@
 */
 void times_table(void)
 {
-	int num1 = '0';
+	int num1 = 0;
 
-	while (num1 <= '9')
+	while (num1 <= 9)
 	{
-		int num2 = '0';
+		int num2 = 0;
 
-		while (num2 <= '9')
+		while (num2 <= 9)
 		{
 			int answer;
 
