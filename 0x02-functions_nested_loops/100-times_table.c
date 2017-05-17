@@ -10,37 +10,37 @@ void print_times_table(int n)
 
 	if ((n < 15) && (n >= 0))
 	{
-	for (y = 0; y <= n; y++)
-	{
-		for (x = 0; x <= n; x++)
+		for (y = 0; y <= n; y++)
 		{
-			answer = (y * x);
-			if (answer <= 9)
+			for (x = 0; x <= n; x++)
 			{
-				if ((answer == 0) && (x == 0))
+				answer = (y * x);
+				if (answer <= 9)
 				{
-					_putchar(answer + '0');
+					if ((answer == 0) && (x == 0))
+					{
+						_putchar(answer + '0');
+					}
+					else
+					{
+						_putchar(' '); _putchar(' '); _putchar(answer + '0');
+					}
+				}
+				else if (answer < 100)
+				{
+					tens = answer / 10; ones = answer % 10;
+					_putchar(' '); _putchar(tens + '0'); _putchar(ones + '0');
 				}
 				else
 				{
-					_putchar(' '); _putchar(' '); _putchar(answer + '0');
+					huns = answer / 100; tens = ((answer / 10) % 10); ones = answer % 10;
+					_putchar(huns + '0'); _putchar(tens + '0'); _putchar(ones + '0');
 				}
+				if (x != n)
+				_putchar(',');
+				_putchar(' ');
 			}
-			else if (answer < 100)
-			{
-				tens = answer / 10; ones = answer % 10;
-				_putchar(' '); _putchar(tens + '0'); _putchar(ones + '0');
-			}
-			else
-			{
-				huns = answer / 100; tens = ((answer / 10) % 10); ones = answer % 10;
-				_putchar(huns + '0'); _putchar(tens + '0'); _putchar(ones + '0');
-			}
-			if (x != n)
-			_putchar(',');
-			_putchar(' ');
+			_putchar('\n');
 		}
-		_putchar('\n');
-	}
 	}
 }
