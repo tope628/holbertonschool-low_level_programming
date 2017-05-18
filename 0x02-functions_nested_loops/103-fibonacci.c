@@ -7,6 +7,7 @@
 int main(void)
 {
 	int num1, num2, sum, even_sum;
+
 	num1 = 1;
 	num2 = 2;
 	even_sum = 2;
