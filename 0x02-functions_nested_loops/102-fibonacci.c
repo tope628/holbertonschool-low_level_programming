@@ -10,10 +10,15 @@ int main(void)
 
 	num1 = 1;
 	num2 = 2;
-	printf("%lu, %lu, ", num1, num2);
 	for (count = 1; count < 50; count++)
 	{
-		if ((num2 > num1) && (count < 49))
+		if ((num1 == 1) && (num2 == 2))
+		{
+			printf("%lu, %lu, ", num1, num2);
+			sum = (num1 + num2);
+			printf("%lu, ", sum);
+		}
+		else if ((num2 > num1) && (count < 49) && (num1 != 1))
 		{
 			sum = (num1 + num2);
 			printf("%lu, ", sum);
@@ -26,6 +31,5 @@ int main(void)
 		num1 = num2;
 		num2 = sum;
 	}
-	count++;
 	return (0);
 }
