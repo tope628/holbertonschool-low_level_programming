@@ -14,7 +14,7 @@ void more_numbers(void)
 			{
 				ones = num % 10;
 
-				if (num > '9')
+				if (num > 9)
 				{
 					_putchar('1');
 				}
