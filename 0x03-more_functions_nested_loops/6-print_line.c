@@ -8,6 +8,7 @@
 void print_line(int n)
 {
 		int line = '_';
+		int count;
 
 		for (count = 0; count < n; count++)
 		{

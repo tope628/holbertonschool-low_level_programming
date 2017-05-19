@@ -1,28 +1,26 @@
 #include "holberton.h"
 
 /**
-* print_most_numbers - print numbers
+* more_numbers - print numbers
 * Return: void
 */
-void print_most_numbers(void)
+void more_numbers(void)
 {
-		int num = '0';
-		int ones = '0';
+		int num, count, ones;
 
-		for (count = 0; count <= 9; count++)
-		if (num <= '9')
+		for (count = 0; count < 10; count++)
 		{
-			_putchar(num);
-			num++;
-		}
-		else
-		{
-			if (ones <= '4')
+			for (num = 0; num < 15; num++)
 			{
-				_putchar('1');
-				_putchar(ones);
-				ones++;
+				ones = num % 10;
+
+				if (num > '9')
+				{
+					_putchar('1');
+				}
+				_putchar(ones + '0');
+
 			}
-		}
 		_putchar('\n');
+		}
 }
