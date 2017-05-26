@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
   * reverse_array - prints string in reverse
