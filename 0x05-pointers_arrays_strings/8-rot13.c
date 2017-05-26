@@ -15,7 +15,7 @@ char *rot13(char *s)
 	for (i = 0; s[i]; i++)
 	{
 		for (x = 0; in[x]; x++)
-		{ 
+		{
 			if (s[i] == in[x])
 			{
 				s[i] = out[x];
