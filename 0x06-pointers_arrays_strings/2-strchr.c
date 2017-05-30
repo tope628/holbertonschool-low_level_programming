@@ -4,7 +4,6 @@
   * Return: pointer to result string
   * @s: given string to scan
   * @c: given character to look for
-  * @p: pointer to return
   */
 char *_strchr(char *s, char c)
 {
@@ -14,7 +13,7 @@ char *_strchr(char *s, char c)
 	for (i = 0; s[i]; i++)
 	{
 		if (s[i] == c)
-		{ 
+		{
 			p = (s + i);
 			return (p);
 		}
