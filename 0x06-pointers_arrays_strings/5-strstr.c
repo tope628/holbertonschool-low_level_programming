@@ -7,13 +7,16 @@
   */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
+	int i, j;
 
 	for (i = 0; haystack[i]; i++)
 	{
-		if ((haystack + i) == needle)
+		for (j = 0; haystack[i + j]; i++)
 		{
-			return (haystack + i);
+			if (haystack[i + j] == needle[j])
+			{
+				return (haystack + i + j);
+			}
 		}
 	}
 	return (0);
