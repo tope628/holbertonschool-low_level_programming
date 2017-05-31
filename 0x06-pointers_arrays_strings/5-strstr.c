@@ -4,26 +4,17 @@
   * Return: pointer to result string
   * @haystack: given string to scan
   * @needle: given character to look for
-  * @p: pointer to return
   */
 char *_strstr(char *haystack, char *needle)
 {
-	char *p;
-	int i, j;
+	int i;
 
 	for (i = 0; haystack[i]; i++)
 	{
-		for (j = 0; j < i; j++)
+		if ((haystack + i) == needle)
 		{
-			if (haystack[i] == needle[j])
-			{ 
-				p = (needle + j);
-			}
-			else 
-			{
-				p = '\0';
-			}	
+			return (haystack + i);
 		}
 	}
-	return (p);
+	return (0);
 }
