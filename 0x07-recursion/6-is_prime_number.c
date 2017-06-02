@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
-  * _sqrt_recursion - exponent int
+  * is_prime - find prime int
   * @x: int given
-  * @y: int given
-  * Return: x power to y
+  * @divisor: variable
+  * Return: 0 or 1
   */
 
 int is_prime(int divisor, int x)
@@ -19,7 +19,12 @@ int is_prime(int divisor, int x)
 	else
 		return (is_prime(divisor + 1, x));
 }
-		
+#include "holberton.h"
+/**
+  * is_prime_number - find prime int
+  * @n: int given
+  * Return: 0 or 1
+  */
 int is_prime_number(int n)
 {
 	if (n <= 1)

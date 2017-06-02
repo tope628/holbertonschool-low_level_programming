@@ -9,3 +9,4 @@ int is_palindrome(char *s);
 int _putchar(char c);
 int natural_root(int divisor, int x);
 int is_prime(int divisor, int x);
+int palindrome(int beg, int end, char *str);

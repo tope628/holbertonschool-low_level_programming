@@ -1,28 +1,49 @@
 #include "holberton.h"
 /**
-  * _sqrt_recursion - exponent int
-  * @x: int given
-  * @y: int given
-  * Return: x power to y
+  * _strlen_recursion - length of a string
+  * @s: string given
+  * Return: length
   */
-
-int is_prime(int divisor, int x)
+int _strlen_recursion(char *s)
 {
-	if (x == divisor)
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	return (1 + _strlen_recursion(s + 1));
+}
+#include "holberton.h"
+/**
+  * palindrome - checks for match
+  * @beg: 0
+  * @end: length given
+  * @str: string given
+  * Return: 0 or 1
+  */
+int palindrome(int beg, int end, char *str)
+{
+	if (beg >= end)
 	{
 		return (1);
 	}
-	if ((x % divisor) == 0)
+	else if (str[beg] != str[end])
 	{
 		return (0);
 	}
 	else
-		return (is_prime(divisor + 1, x));
+		return (palindrome(beg + 1, end - 1, str));
 }
-		
-int is_palindrome(int n)
+
+#include "holberton.h"
+/**
+  * is_palindrome - palindrome
+  * @s: int given
+  * Return: 0 or 1
+  */
+int is_palindrome(char *s)
 {
-	if (n <= 1)
-		return (0);
-	return (is_prime(2, n));
+	int length = (_strlen_recursion(s) - 1);
+
+	return (palindrome(0, length, s));
 }
+

@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
-  * _sqrt_recursion - exponent int
+  * natural_root - find square root
+  * Return: root
+  * @divisor: int
   * @x: int given
-  * @y: int given
-  * Return: x power to y
   */
 
 int natural_root(int divisor, int x)
@@ -18,7 +18,12 @@ int natural_root(int divisor, int x)
 	}
 	return (natural_root(divisor + 1, x));
 }
-		
+#include "holberton.h"
+/**
+  * _sqrt_recursion - exponent int
+  * @n: int given
+  * Return: x power to y
+  */
 int _sqrt_recursion(int n)
 {
 	if (n == 0)
