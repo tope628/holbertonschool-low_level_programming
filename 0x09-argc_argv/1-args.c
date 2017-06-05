@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
-  *
-  *
+  * main - count
+  * Return: 0
   */
 
 int main(int argc, char *argv[] __attribute__((unused)))

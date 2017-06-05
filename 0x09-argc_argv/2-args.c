@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-  *
-  *
+  * main - args
+  * Return: 0 
   */
 
 int main(int argc, char *argv[])
