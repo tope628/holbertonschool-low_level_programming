@@ -2,6 +2,8 @@
 
 /**
   * main - name
+  * @argc: count
+  * @argv: array
   * Return: 0
   */
 
