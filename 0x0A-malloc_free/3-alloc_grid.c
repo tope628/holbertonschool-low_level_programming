@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - 2d array 
+ * alloc_grid - 2d array
  * @width: width of array
  * @height: height of array
  *
- * Return: double pointer 
+ * Return: double pointer
  */
 int **alloc_grid(int width, int height)
 {
@@ -17,7 +17,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	arr = malloc(sizeof(int *) * height);
-	
+
 	if (arr == NULL)
 	{
 		return (NULL);
