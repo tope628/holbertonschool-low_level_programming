@@ -1,45 +1,43 @@
 #include "holberton.h"
 #include <stdlib.h>
+
 /**
-  * create_array - array of chars
-  * @size: int given
-  * @c: specific char
-  * Return: 0
-  */
-
-char *str_concat(char *s1, char *s2)
+ * alloc_grid - 2d array 
+ * @width: width of array
+ * @height: height of array
+ *
+ * Return: double pointer 
+ */
+int **alloc_grid(int width, int height)
 {
-	unsigned int i, j, x = 0;
-	char *arr;
+	int i, j, **arr;
 
-	if (s1 == NULL)
+	if (width <= 0 || height <= 0)
 	{
-		i = 0;
+		return (NULL);
 	}
-	else if (s2 == NULL)
-	{
-		j = 0;
-	}
-	else
-	{
-		for (i = 0; (*(s1 + i)); i++)
-			{}
-		for (j = 0; s2[j]; j++)
-		{
-			i += (j + 1);
-		}
-	}
-
-	arr = malloc(i * sizeof(char));
-
+	arr = malloc(sizeof(int *) * height);
+	
 	if (arr == NULL)
 	{
 		return (NULL);
 	}
-	while (x < i)
+	for (i = 0; i < height; i++)
 	{
-		arr[i] += s2[j];
+		arr[i] = malloc(sizeof(int) * width);
+		if (arr[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+			{
+				free(arr[j]);
+			}
+			free(arr);
+			return (NULL);
+		}
+		for (j = 0; j < width; j++)
+		{
+			arr[i][j] = 0;
+		}
 	}
-	arr[i + j] = '\0';
 	return (arr);
 }
