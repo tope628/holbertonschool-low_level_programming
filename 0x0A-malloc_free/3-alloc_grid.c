@@ -9,7 +9,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, j, x, y;
+	unsigned int i, j, x = 0;
 	char *arr;
 
 	if (s1 == NULL)
@@ -25,23 +25,20 @@ char *str_concat(char *s1, char *s2)
 		for (i = 0; (*(s1 + i)); i++)
 			{}
 		for (j = 0; s2[j]; j++)
-		{}
+		{
+			i += (j + 1);
+		}
 	}
-	x = i + j + 1;
 
-	arr = malloc(x * sizeof(char));
+	arr = malloc(i * sizeof(char));
 
 	if (arr == NULL)
 	{
 		return (NULL);
 	}
-	for (y = 0; y < i; y++)
+	while (x < i)
 	{
-		arr[y] = s1[y];
-	}
-	for (y = 0; y < j; y++)
-	{
-		arr[y + i] = s2[y];
+		arr[i] += s2[j];
 	}
 	arr[i + j] = '\0';
 	return (arr);
