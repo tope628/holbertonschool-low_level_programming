@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
-  * create_array - array of chars
-  * @size: int given
-  * @c: specific char
+  * *str_concat - array of chars
+  * @s1: int given
+  * @s2: specific char
   * Return: 0
   */
 
