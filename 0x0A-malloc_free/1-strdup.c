@@ -10,6 +10,11 @@
 char *_strdup(char *str)
 {
 	char *s;
+	
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 
 	s = malloc(strlen(str) + 1);
 
@@ -17,6 +22,9 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	strcpy (s,str);
+	else
+	{
+		strcpy (s,str);
+	}
 	return (s);
 }
