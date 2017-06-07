@@ -54,9 +54,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	else
-	{
-		_strcpy(s, str);
-	}
+	_strcpy(s, str);
+	
 	return (s);
 }
