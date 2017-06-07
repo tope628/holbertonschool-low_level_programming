@@ -10,7 +10,7 @@
 char *_strdup(char *str)
 {
 	char *s;
-	
+
 	if (str == NULL)
 	{
 		return (NULL);
@@ -24,7 +24,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		strcpy (s,str);
+		strcpy(s, str);
 	}
 	return (s);
 }
