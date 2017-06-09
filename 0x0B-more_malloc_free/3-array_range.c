@@ -11,14 +11,12 @@
 
 int *array_range(int min, int max)
 {
-	int i, x, y;
+	int i, x;
 	int *p;
 
 	if (min > max)
 		return (NULL);
-	for (x = min; x <= max; x++)
-		;
-	y = x + 1;
+	x = max - min + 1;
 /**	printf("%i\n", y);
 */
 	p = malloc(sizeof(int) * x);
@@ -26,8 +24,8 @@ int *array_range(int min, int max)
 	if (p == NULL)
 		return (NULL);
 
-	for (x = min, i = 0; i < y; x++, i++)
-		p[i] = x;
+	for (i = 0; i < x; min++, i++)
+		p[i] = min;
 
 	return (p);
 }
