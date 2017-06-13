@@ -9,7 +9,7 @@
   */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, j, k;
+	unsigned int i, j, k;
 	dog_t *woof;
 
 	if (name == NULL || owner == NULL)
@@ -35,7 +35,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (woof->owner == NULL)
 	{
 		free(woof);
-		free(woof->owner);
+		free(woof->name);
 		return (NULL);
 	}
 
