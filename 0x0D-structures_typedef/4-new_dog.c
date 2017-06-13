@@ -9,11 +9,8 @@
   */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int i, j, k;
+	int i, j, k;
 	dog_t *woof;
-
-	if (name == NULL || owner == NULL)
-		return (NULL);
 
 	woof = malloc(sizeof(dog_t));
 	if (woof == NULL)
