@@ -4,15 +4,16 @@
 
 /**
   * main - get arguments to run in other functions
-  * @argc - argument count
-  * @argv - position if argument
-  * Return - int
+  * @argc: argument count
+  * @argv: position if argument
+  * Return: int
   */
 
 int main(int argc, char *argv[])
 {
 	int answer, num1, num2;
 	int (*ptrf)(int, int);
+
 	if (argc != 4)
 	{
 		printf("Error\n");

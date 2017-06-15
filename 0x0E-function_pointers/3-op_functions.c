@@ -56,7 +56,7 @@ int op_div(int a, int b)
  * op_mod - find the remainder a/b
  * @a: first number
  * @b: second number
- * Return: remainder 
+ * Return: remainder
  */
 int op_mod(int a, int b)
 {
