@@ -1,6 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+  * main - print opcodes
+  * argc: argument count
+  * argv: seperate arguments
+  * Return: 0 if successful
+  */
+
 int main(int argc, char *argv[])
 {
 	unsigned char *address = main;
@@ -19,12 +26,14 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < num; i++)
 	{
-		printf("%x", address[i]);
-		if (i < num - 1)
+		if (num - 1 == i)
 		{
-			putchar(' ');
+			printf("%02x\n", address[i]);
+		}
+		else
+		{
+			printf("%02x ", address[i]);
 		}
 	}	
-       putchar('\n');	
 	return (0);
 }
