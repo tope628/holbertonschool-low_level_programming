@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_start(nums, n);
 	for (i = 0; i < n; i++)
 	{
-		str = va_arg(nums, char *); 
+		str = va_arg(nums, char *);
 		if (str != NULL)
 		{
 			printf("%s", str);
