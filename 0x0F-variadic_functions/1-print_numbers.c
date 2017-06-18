@@ -21,14 +21,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			if (i == n - 1)
 			{
-				printf("%d", va_arg(nums, unsigned int));
+				printf("%d", va_arg(nums, int));
 			}
 			else
 			{
-				printf("%d%s", va_arg(nums, unsigned int), separator);
+				printf("%d%s", va_arg(nums, int), separator);
 			}
 		}
 	}
 	putchar('\n');
-	va_end(nums):
 }
