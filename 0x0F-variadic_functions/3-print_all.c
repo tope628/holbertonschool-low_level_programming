@@ -1,6 +1,5 @@
-#include "variadic_functions.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include "variadic_functions.h"
 /**
   * print_c - prints different formats
   * @list: format given as a string
@@ -76,10 +75,10 @@ void print_all(const char * const format, ...)
 				f[j].f(list);
 				sep = ", ";
 			}
-		j++;
+			j++;
 		}
-	i++;
+		i++;
 	}
 va_end(list);
-putchar('\n');
+printf("\n");
 }
