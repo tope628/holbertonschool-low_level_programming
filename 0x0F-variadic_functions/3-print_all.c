@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
   * print_c - prints different formats
   * @list: format given as a string
@@ -67,6 +67,7 @@ void print_all(const char * const format, ...)
 
 	while (format[i] != '\0' && format != '\0')
 	{
+		j = 0;
 		while (f[j].per != NULL)
 		{
 			if (f[j].per[0] == format[i])
@@ -78,7 +79,6 @@ void print_all(const char * const format, ...)
 		j++;
 		}
 	i++;
-	j = 0;
 	}
 va_end(list);
 putchar('\n');
