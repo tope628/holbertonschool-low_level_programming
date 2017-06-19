@@ -1,16 +1,17 @@
 #ifndef _VARIADIC_FUNCTIONS_H_
 #define _VARIADIC_FUNCTIONS_H_
 #include <stdarg.h>
+
 /**
-  * struct correct_format -  print specific type
-  * @per: type
-  * @f: function
-  */
-typedef struct correct_format
+ * struct print - print something
+ * @t: type
+ * @f: function
+ */
+typedef struct print
 {
-	char *per;
+	char *t;
 	void (*f)(va_list);
-} cor_f;
+} print_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);

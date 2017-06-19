@@ -47,42 +47,41 @@ void print_s(va_list s)
 }
 
 /**
-  * print_all - prints different formats
-  * @format: format given as a string
-  * Return: proper format printed
-  */
-
+ * print_all - prints anything
+ * @format: any format
+ * Return: anything
+ */
 void print_all(const char * const format, ...)
 {
-	cor_f f[] = {
-		{"c", print_c},
-		{"i", print_i},
-		{"f", print_f},
-		{"s", print_s},
-		{NULL, NULL}
-	};
+  print_t p[] = {
+    {"c", print_c},
+    {"s", print_s},
+    {"i", print_i},
+    {"f", print_f},
+    {NULL, NULL}
+  };
 
-	va_list list;
-	unsigned int i = 0, j = 0;
-	char *sep = "";
+  va_list valist;
+  unsigned int i = 0, j = 0;
+  char *separator = "";
 
-	va_start(list, format);
+  va_start(valist, format);
 
-	while (format[i] && format)
+  while (format && format[i])
+    {
+      j = 0;
+      while (p[j].t != NULL)
 	{
-		j = 0;
-		while (f[j].per != NULL)
-		{
-			if (*(f[j].per) == format[i])
-			{
-				printf("%s", sep);
-				f[j].f(list);
-				sep = ", ";
-			}
-			j++;
-		}
-		i++;
+	  if (*(p[j].t) == format[i])
+	    {
+	      printf("%s", separator);
+	      p[j].f(valist);
+	      separator = ", ";
+	    }
+	  j++;
 	}
-	va_end(list);
-	printf("\n");
+      i++;
+    }
+  va_end(valist);
+  printf("\n");
 }
