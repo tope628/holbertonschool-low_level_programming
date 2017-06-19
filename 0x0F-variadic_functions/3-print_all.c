@@ -1,50 +1,51 @@
 #include <stdio.h>
 #include "variadic_functions.h"
-/**
-  * print_c - prints different formats
-  * @list: format given as a string
-  * Return: proper format printed
-  */
-void print_c(va_list list)
-{
-	printf("%c", va_arg(list, int));
-}
-/**
-  * print_i - prints different formats
-  * @list: format given as a string
-  * Return: proper format printed
-  */
 
-void print_i(va_list list)
-{
-	printf("%i", va_arg(list, int));
-}
 /**
-  * print_f - prints different formats
-  * @list: format given as a string
-  * Return: proper format printed
-  */
-
-void print_f(va_list list)
+ * print_c - print char
+ * @c: a char
+ * Return: nothing
+ */
+void print_c(va_list c)
 {
-	printf("%f", va_arg(list, double));
+  printf("%c", va_arg(c, int));
 }
+
 /**
-  * print_s - prints different formats
-  * @list: format given as a string
-  * Return: proper format printed
-  */
-void print_s(va_list list)
+ * print_i - print integer
+ * @i: an int
+ * Return: nothing
+ */
+void print_i(va_list i)
 {
-	char *str;
-
-	str = va_arg(list, char *);
-	if (str == NULL)
-	{
-		str = "(nil)";
-	}
-	printf("%s", str);
+  printf("%i", va_arg(i, int));
 }
+
+/**
+ * print_f - print float
+ * @f: a float
+ * Return: nothing
+ */
+void print_f(va_list f)
+{
+  printf("%f", va_arg(f, double));
+}
+
+/**
+ * print_s - print string
+ * @s: a string
+ * Return: nothing
+ */
+void print_s(va_list s)
+{
+  char *string = va_arg(s, char*);
+
+  if (string == NULL)
+    string = "(nil)";
+
+  printf("%s", string);
+}
+
 /**
   * print_all - prints different formats
   * @format: format given as a string
