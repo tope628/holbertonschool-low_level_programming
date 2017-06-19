@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_list list;
-	int i = 0, j = 0;
+	unsigned int i = 0, j = 0;
 	char *sep = "";
 
 	va_start(list, format);
