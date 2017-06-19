@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (f[j].per != NULL)
 		{
-			if (f[j].per[0] == format[i])
+			if (f[j].per == format[i])
 			{
 				printf("%s", sep);
 				f[j].f(list);
