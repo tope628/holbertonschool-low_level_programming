@@ -2,49 +2,50 @@
 #include "variadic_functions.h"
 /**
   * print_c - prints different formats
-  * @list: format given as a string
+  * @c: format given as a string
   * Return: proper format printed
   */
-void print_c(va_list list)
+
+void print_c(va_list c)
 {
-	printf("%c", va_arg(list, int));
+	printf("%c", va_arg(c, int));
 }
+
 /**
   * print_i - prints different formats
-  * @list: format given as a string
+  * @i: format given as a string
   * Return: proper format printed
   */
-
-void print_i(va_list list)
+void print_i(va_list i)
 {
-	printf("%i", va_arg(list, int));
+	printf("%i", va_arg(i, int));
 }
+
 /**
   * print_f - prints different formats
-  * @list: format given as a string
+  * @f: format given as a string
   * Return: proper format printed
   */
-
-void print_f(va_list list)
+void print_f(va_list f)
 {
-	printf("%f", va_arg(list, double));
+	printf("%f", va_arg(f, double));
 }
+
 /**
   * print_s - prints different formats
-  * @list: format given as a string
+  * @s: format given as a string
   * Return: proper format printed
   */
-void print_s(va_list list)
+void print_s(va_list s)
 {
-	char *str;
+	char *string = va_arg(s, char*);
 
-	str = va_arg(list, char *);
-	if (str == NULL)
-	{
-		str = "(nil)";
-	}
-	printf("%s", str);
+	if (string == NULL)
+		string = "(nil)";
+
+	printf("%s", string);
 }
+
 /**
   * print_all - prints different formats
   * @format: format given as a string
