@@ -68,7 +68,7 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 
-	while (format[i] && format)
+	while (format && format[i])
 	{
 		j = 0;
 		while (f[j].per != NULL)
