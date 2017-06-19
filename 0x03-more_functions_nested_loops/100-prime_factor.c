@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	long int n = 148;
+	long int n = 612852475143;
 	long int max, divisor;
 
 	divisor = 2;

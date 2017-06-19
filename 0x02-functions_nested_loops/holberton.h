@@ -11,7 +11,3 @@ int print_last_digit(int);
 void print_to_98(int n);
 void jack_bauer(void);
 void print_times_table(int n);
-void print_diagonal(int n);
-int _strlen(char *s);
-void print_array(int *a, int n);
-void _puts_recursion(char *s);
