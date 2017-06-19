@@ -3,15 +3,15 @@
 #include <stdarg.h>
 
 /**
- * struct print - print something
- * @t: type
+ * struct correct_format - print something
+ * @per: type
  * @f: function
  */
-typedef struct print
+typedef struct correct_format
 {
-	char *t;
+	char *per;
 	void (*f)(va_list);
-} print_t;
+} cor_f;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
