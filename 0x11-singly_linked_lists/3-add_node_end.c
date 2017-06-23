@@ -3,15 +3,15 @@
 #include <string.h>
 
 /**
-  * add_node - print list of nodes
+  * add_node_end - print list of nodes
   * @h: pointer to list
   * Return: size_t int
   */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	unsigned int i;
-	list_t *list;
+	list_t *list, *t;
 
 	if (str == NULL)
 		return (NULL);
@@ -30,8 +30,18 @@ list_t *add_node(list_t **head, const char *str)
 	for (i = 0; str[i]; i++)
 		;
 	list->len = i;
-	list->next = *head;
-	*head = list;
-
-	return (list);
-}
+	list->next = NULL;
+	
+	if (*head == NULL)
+	{
+	       *head = list;
+	       return (list);
+	}
+	t = *head;
+	while (t->next)
+	{
+		t = t->next;
+	}
+	t->next = list;
+       return(list);
+}       
