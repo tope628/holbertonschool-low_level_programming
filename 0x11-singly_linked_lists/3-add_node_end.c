@@ -4,8 +4,9 @@
 
 /**
   * add_node_end - print list of nodes
-  * @h: pointer to list
-  * Return: size_t int
+  * @head: pointer to list
+  * @str: pointer to string
+  * Return: list
   */
 
 list_t *add_node_end(list_t **head, const char *str)
@@ -24,18 +25,17 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (list->str == NULL)
 	{
 		free(list);
-		return(NULL);
+		return (NULL);
 	}
 
 	for (i = 0; str[i]; i++)
 		;
 	list->len = i;
 	list->next = NULL;
-	
 	if (*head == NULL)
 	{
-	       *head = list;
-	       return (list);
+		*head = list;
+		return (list);
 	}
 	t = *head;
 	while (t->next)
@@ -43,5 +43,5 @@ list_t *add_node_end(list_t **head, const char *str)
 		t = t->next;
 	}
 	t->next = list;
-       return(list);
-}       
+	return (list);
+}

@@ -4,8 +4,9 @@
 
 /**
   * add_node - print list of nodes
-  * @h: pointer to list
-  * Return: size_t int
+  * @head: pointer to list
+  * @str: pointer to str
+  * Return: list
   */
 
 list_t *add_node(list_t **head, const char *str)
@@ -24,7 +25,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (list->str == NULL)
 	{
 		free(list);
-		return(NULL);
+		return (NULL);
 	}
 
 	for (i = 0; str[i]; i++)
