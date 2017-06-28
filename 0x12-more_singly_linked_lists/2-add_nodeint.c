@@ -3,9 +3,9 @@
 #include <string.h>
 
 /**
-  * add_node - print list of nodes
+  * add_nodeint - print list of nodes
   * @head: pointer to list
-  * @str: pointer to str
+  * @n: pointer to str
   * Return: list
   */
 

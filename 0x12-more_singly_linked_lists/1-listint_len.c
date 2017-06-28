@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 /**
-  * print_listint - print list of nodes
+  * listint_len - print list of nodes
   * @h: pointer to list
   * Return: size_t int
   */
