@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <limits.h>
-#include <stdio.h>
 /**
   * get_bit - value of bit at given index
   * @n: number given
