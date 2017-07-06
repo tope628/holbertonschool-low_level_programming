@@ -54,10 +54,6 @@ int main(int argc, char *argv[])
 		if (count != fail)
 		{
 			error(99, argv[1]);
-			fail = close(file_from);
-			other_fail = close(file_to);
-			if (fail == -1 || other_fail == -1)
-				error(100, NULL);
 		}
 	}
 	fail = close(file_from);
