@@ -33,7 +33,7 @@ void error(int n, char *file)
 
 int main(int argc, char *argv[])
 {
-	int fail, count, file_from, file_to;
+	int fail, other_fail, count, file_from, file_to;
 	char *buf;
 
 	buf = malloc(sizeof(char) * 1204);
@@ -57,9 +57,11 @@ int main(int argc, char *argv[])
 			fail = read(file_from, buf, 1204);
 		if (count == -1)
 		{
-			error(99, argv[1]);
-			close(file_from);
-			close(file_to);
+			error(99, argv[1]), free(buf);
+			fail = close(file_from);
+			other_fail = close(file_to);
+			if (fail == -1 || other_fail == -1)
+				error(100, NULL);
 		}
 	}
 	free(buf);
