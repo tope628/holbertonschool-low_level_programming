@@ -52,9 +52,7 @@ int main(int argc, char *argv[])
 			error(98, argv[1]);
 		count = write(file_to, buf, fail);
 		if (count != fail)
-		{
 			error(99, argv[1]);
-		}
 	}
 	fail = close(file_from);
 	if (fail == -1)
