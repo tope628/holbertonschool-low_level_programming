@@ -33,7 +33,7 @@ void error(int n, char *file)
 
 int main(int argc, char *argv[])
 {
-	int fail, other_fail, count, file_from, file_to;
+	int fail, count, file_from, file_to;
 	char buf[1204];
 
 	if (argc != 3)
