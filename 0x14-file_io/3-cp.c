@@ -34,7 +34,7 @@ void error(int n, char *file)
 int main(int argc, char *argv[])
 {
 	int fail, count, file_from, file_to;
-	char buf[1204];
+	char buf[1024];
 
 	if (argc != 3)
 		error(97, NULL);
@@ -44,10 +44,10 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2],  O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 		error(99, argv[2]);
-	fail = 1204;
-	while (fail == 1204)
+	fail = 1024;
+	while (fail == 1024)
 	{
-		fail = read(file_from, buf, 1204);
+		fail = read(file_from, buf, 1024);
 		if (fail == -1)
 			error(98, argv[1]);
 		count = write(file_to, buf, fail);
