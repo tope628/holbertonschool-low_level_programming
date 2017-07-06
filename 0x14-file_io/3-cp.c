@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
 	buf = malloc(sizeof(char) * 1204);
 	if (buf == NULL)
-		return (0);
+		return (1);
 	if (argc != 3)
 		error(97, NULL);
 	file_from = open(argv[1], O_RDONLY);
