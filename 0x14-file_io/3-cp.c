@@ -56,7 +56,11 @@ int main(int argc, char *argv[])
 		if (count > 0)
 			fail = read(file_from, buf, 1204);
 		if (count == -1)
+		{
 			error(99, argv[1]);
+			close(file_from);
+			close(file_to);
+		}
 	}
 	free(buf);
 	fail = close(file_from);
