@@ -17,7 +17,7 @@ void error(int n, char *file)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
 			exit(98);
 		case 99:
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 			exit(99);
 		default:
 			dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", n);
