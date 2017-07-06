@@ -60,7 +60,6 @@ int main(int argc, char *argv[])
 				error(100, NULL);
 		}
 	}
-	free(buf);
 	fail = close(file_from);
 	if (fail == -1)
 		error(100, NULL);
