@@ -34,11 +34,8 @@ void error(int n, char *file)
 int main(int argc, char *argv[])
 {
 	int fail, other_fail, count, file_from, file_to;
-	char *buf;
+	char buf[1204];
 
-	buf = malloc(sizeof(char) * 1204);
-	if (buf == NULL)
-		return (1);
 	if (argc != 3)
 		error(97, NULL);
 	file_from = open(argv[1], O_RDONLY);
@@ -47,17 +44,16 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2],  O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 		error(99, argv[2]);
-	fail = read(file_from, buf, 1204);
-	if (fail == -1)
-		error(98, argv[1]);
-	while (fail > 0)
+	fail = 1204;
+	while (fail == 1204)
 	{
+		fail = read(file_from, buf, 1204);
+		if (fail == -1)
+			error(98, argv[1]);
 		count = write(file_to, buf, fail);
-		if (count > 0)
-			fail = read(file_from, buf, 1204);
-		if (count == -1)
+		if (count != fail)
 		{
-			error(99, argv[1]), free(buf);
+			error(99, argv[1]);
 			fail = close(file_from);
 			other_fail = close(file_to);
 			if (fail == -1 || other_fail == -1)
