@@ -3,32 +3,48 @@
 /**
  * quick_sort - quick sort algorithm
  * @array: array givin
- * @size size of the array
+ * @size: size of the array
  */
 
 void quick_sort(int *array, size_t size)
 {
 	int right, left;
 
-	if(!array || size == 0)
+	if (!array || size == 0)
 		return;
 	right = size - 1;
 	left = 0;
 
 	sort_quick(array, left, right, size);
 }
+/**
+ * sort_quick - recursive function
+ * @array: array given
+ * @left: start of sliced array
+ * @right: end of sliced array
+ * @size: size given
+ */
 
 void sort_quick(int *array, int left, int right, size_t size)
 {
 	int part_idx;
 
-	if(left < right)
+	if (left < right)
 	{
 		part_idx = L_partition(array, left, right, size);
 		sort_quick(array, left, part_idx - 1, size);
 		sort_quick(array, part_idx + 1, right, size);
 	}
 }
+
+/**
+ * L_partition - Lomuto's partition function
+ * @array: array given
+ * @left: start of sliced array
+ * @right: end of sliced array
+ * @size: size given
+ * Return: position of new slice idx
+ */
 
 int L_partition(int *array, int left, int right, size_t size)
 {
