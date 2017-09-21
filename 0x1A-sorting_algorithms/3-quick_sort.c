@@ -53,7 +53,7 @@ int L_partition(int *array, int left, int right, size_t size)
 	pivot = array[right];
 	i = left - 1;
 
-	for (j = left; j <= right - 1; j++)
+	for (j = left; j <= right; j++)
 	{
 		if (array[j] <= pivot)
 		{
