@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * inserion_sort_list - insertion sort algo
+ * insertion_sort_list - insertion sort algo
  * @list: doubly linked list of integers
  */
 
@@ -12,11 +12,10 @@ void insertion_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	while(current)
+	while (current)
 	{
 		next = current->next;
-
-		while(current->prev && current->prev->n > current->n)
+		while (current->prev && current->prev->n > current->n)
 		{
 				swap(list, current);
 				print_list(*list);
@@ -24,6 +23,11 @@ void insertion_sort_list(listint_t **list)
 		current = next;
 	}
 }
+/**
+ * swap - swap nodes of a doubly linked list
+ * @array: start of dll
+ * @current: current node to be swapped
+ */
 
 void swap(listint_t **array, listint_t *current)
 {
